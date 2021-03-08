@@ -28,15 +28,9 @@ public:
   
 int main()
 {
-	BinNode<int> *r = new BinNode<int>(0);
-	BinNode<int> * p, *q;
-	p = q = r;
-	for (int i = 1; i < 10; ++i)
-	{
-		p = p->insertAsLc(i);
-		q = q->insertAsRc(2 * i);
-	}
-	cout << r->getHeight() << endl;
+	BinTree<int> bt("tree.txt");
+	bt.travMid(fun);
+	cout << bt.getHeight() << endl << bt.getSize() << endl;
 	while (1);
 	return 0;
 }
